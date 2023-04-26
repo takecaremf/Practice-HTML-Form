@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Review</title>
+    </head>
+    <form>
+        <h1>Books i've read:</h1>
+        <ul>
+          <li><input type="checkbox" id="lotr" name="books[]" value="The Lord of the Rings"><label for="lotr">The Lord of the Rings</label></li>
+          <li><input type="checkbox" id="tkam" name="books[]" value="To Kill a Mockingbird"><label for="tkam">To Kill a Mockingbird</label></li>
+          <li><input type="checkbox" id="gatsby" name="books[]" value="The Great Gatsby"><label for="gatsby">The Great Gatsby</label></li>
+        </ul>
+      
+        <h1>Movies Ratings</h1>
+        <ul>
+          <li><label for="shawshank">The Shawshank Redemption:</label> <input type="range" name="rating1" min="0" max="10"></li>
+          <li><label for="godfather">The Godfather:</label> <input type="range" id="godfather" name="rating2" min="0" max="10"></li>
+          <li><label for="pulpfiction">Pulp Fiction:</label> <input type="range" id="pulpfiction" name="rating3" min="0" max="10"></li>
+        </ul>
+      
+        <h1>Best Music</h1>
+        <ol>
+          <li><input type="radio" id="beatles" name="music" value="The Beatles"><label for="beatles">The Beatles</label></li>
+          <li><input type="radio" id="dylan" name="music" value="Bob Dylan"><label for="dylan">Bob Dylan</label></li>
+          <li><input type="radio" id="cash" name="music" value="Johnny Cash"><label for="cash">Johnny Cash</label></li>
+        </ol>
+      
+        <input type="submit" value="Submit">
+      </form>
+</html>
