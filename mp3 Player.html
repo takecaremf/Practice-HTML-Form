@@ -1,0 +1,48 @@
+!DOCTYPE <html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Product Review</title>
+        </head>
+        <body>
+            <h2>MP3 Player</h2>
+            <form action="">
+                <label>
+                    <label for="song">Select a song:</label>
+		<select id="song" name="song">
+			<option value="song1">Song 1</option>
+			<option value="song2">Song 2</option>
+			<option value="song3">Song 3</option>
+			<option value="song4">Song 4</option>
+			<option value="song5">Song 5</option>
+		</select><br>
+
+		<label for="volume">Volume:</label>
+		<input type="range" id="volume" name="vol" min="10" max="80" value="40"><br>
+
+		<input type="submit" value="Play">
+	</form>
+
+	<script>
+		// Get the form element
+		var form = document.querySelector("form");
+
+		// Add an event listener to the form submit event
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+
+			// Get the selected song and volume values
+			var song = document.getElementById("song").value;
+			var volume = document.getElementById("volume").value;
+
+			// Build the query string
+			var queryString = "?song=" + encodeURIComponent(song) + "&vol=" + encodeURIComponent(volume);
+
+			// Redirect to the URL with the query string
+			window.location.href = window.location.href.split("?")[0] + queryString;
+		});
+	</script>
+</body>
+</html>
